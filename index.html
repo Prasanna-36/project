@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Care Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+
+  <style>
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+        .form-control{
+            padding: 10px;
+            margin-top: 20px;
+            margin-right:50px;
+            margin-bottom:20px;
+        }
+
+        .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgb(17, 207, 27);
+            border-radius: 25px;
+        }
+        .body{
+            background-color: #c2f5f5;
+            background-image: "https://graphicsfamily.com/wp-content/uploads/edd/2021/08/Health-Logo-Design-Free-Download-scaled.jpg";
+        }
+
+        .container-fluid{
+            background-color: rgb(56, 13, 124);
+            padding: 15px;
+            margin: 5px;
+        }
+        .form-group{
+            padding: 25px;
+            text-decoration: dotted;
+            background: linear-gradient(rgb(152, 235, 158),rgb(248, 248, 136));
+            border-radius: 25px;
+        }
+        .container my-4 mt-4{
+            background-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdpIOj1ar2T_rbEmNoPAY33aePszsOHn_gg&s";
+        }
+
+    </style>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo at the top-left corner -->
+            <div class="logo">
+                <img class="myimg" src="data:image/png;base64,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" alt="">
+            </div>
+
+            <a class="navbar-brand" href="#">Health Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <!--<input class="form-control me-2" type="search" placeholder="reset" aria-label="Search">-->
+                    <button style="background-color: antiquewhite; color: #7526f3;" class="btn btn-outline-success" type="submit">reset</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<!-- main form of page -->
+<h1 class="mt-4 my-4 text-center text-green">Health Care Center</h1>
+<div class="container my-4 mt-4" style="background:radial-gradient(rgb(9, 9, 155),rgb(72, 116, 212),rgb(79, 190, 218)) ; color: rgb(20, 18, 18); border-radius: 15px; padding: 40px; text-shadow: 10mm;">
+    <form action="/predict" method="post">
+        <div class="form-group" >
+            <label for="symptoms" style="text-decoration: wavy;">Type Symptoms:</label>
+            <input type="text" class="form-control", id="symptoms" name="symptoms" placeholder="type symptoms such as itching, sleeping, aching etc">
+
+        </div>
+
+        <!-- Display the transcribed text here -->
+        <div name="mysysms" id="transcription"></div>
+
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <br>
+
+        <button type="submit" class="btn btn-danger btn-lg" style="width: 10%; padding: 10px; margin: 10px; padding-block: 10px;">Predict</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+{% if predicted_disease %}
+
+<!-- Results -->
+<h1 class="text-center my-4 mt-4">Our AI System Results</h1>
+<div class="container">
+
+    <div class="result-container">
+        <!-- Buttons to toggle display -->
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#diseaseModal" style="padding:5px;  margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#F39334;color:black;">Disease</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#descriptionModal" style="padding:5px; margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#268AF3 ;color:black;">Description</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#precautionModal" style="padding:5px; margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#F371F9 ;color:black;">Precaution</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#medicationsModal" style="padding:5px; margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px;border-radius:5px; background:#F8576F ;color:black;">Medications</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#workoutsModal" style="padding: 5px; margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#99F741 ;color:black;">Workouts</button>
+        <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#dietsModal" style="padding:5px; margin: 5px 70px 5px 0; font-size:20px;font-weight:bold; width:140px; border-radius:5px; background:#E5E23D;color:black;">Diets</button>
+    </div>
+</div>
+
+{% endif %}
+
+<!-- Disease Modal -->
+    <div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;"> <!-- Set header background color inline -->
+                    <h5 class="modal-title" id="diseaseModalLabel">Predicted Disease</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-color: modal-body-color;"> <!-- Set modal body background color inline -->
+                    <p>{{ predicted_disease }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Description Modal -->
+    <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;">
+                    <h5 class="modal-title" id="descriptionModalLabel">Description</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>{{ dis_des }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Precaution Modal -->
+    <div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;">
+                    <h5 class="modal-title" id="precautionModalLabel">Precaution</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        {% for i in my_precautions %}
+                            <li>{{ i }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Medications Modal -->
+    <div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;">
+                    <h5 class="modal-title" id="medicationsModalLabel">Medications</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        {% for i in medications %}
+                            <li>{{ i }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workouts Modal -->
+    <div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;">
+                    <h5 class="modal-title" id="workoutsModalLabel">Workouts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        {% for i in workout %}
+                            <li>{{ i }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diets Modal -->
+    <div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #020606; color:white;">
+                    <h5 class="modal-title" id="dietsModalLabel">Diets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        {% for i in my_diet %}
+                            <li>{{ i }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <script>
+    const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
+    const transcriptionDiv = document.getElementById('transcription');
+
+    startSpeechRecognitionButton.addEventListener('click', startSpeechRecognition);
+
+    function startSpeechRecognition() {
+        const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for compatibility
+
+        recognition.lang = 'en-US'; // Set the language for recognition
+
+        recognition.onresult = function (event) {
+            const result = event.results[0][0].transcript;
+            transcriptionDiv.textContent = result;
+        };
+
+        recognition.onend = function () {
+            console.log('Speech recognition ended.');
+        };
+
+        recognition.start();
+    }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
